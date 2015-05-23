@@ -21,7 +21,7 @@
      received.
 
 ** New: munin-httpd
-*** What?
+*** A simple web server
 
     A web server displaying munin master data.  It listens on
     http://localhost:4948/ by default.
@@ -32,7 +32,16 @@
 
     Much easier to debug
 
+*** New features
+
+    Each graph is available as .png, .ps, .eps, .pdf or .svg image, or
+    as data with .xml, .json or .csv extension.
+
+    Each page available as as webpage with .html extension, or as data
+    with .xml or .json extension.
+
 *** How?
+
 **** start server
 
      (Needs munin-update to run first.  It will not have anything
