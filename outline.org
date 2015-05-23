@@ -52,27 +52,27 @@
 
 ** Removed: munin-cgi-*
 
-**** hard to configure
+*** Problem: Hard to configure
 
-     The web server configuration must match configuration in
-     munin.conf for paths to be aligned.
+    The web server configuration must match configuration in
+    munin.conf for paths to be aligned.
 
-     Environment variables must be set and passed correctly.
+    Environment variables must be set and passed correctly.
 
-**** Support
+*** Problem: Support burden
 
-     The single most time-consuming issue on the #munin channel on
-     IRC.  "Getting dynamic graphing to work".
+    The single most time-consuming issue on the #munin channel on
+    IRC.  "Getting dynamic graphing to work".
 
-     Munin is a volunteer project, like many other Free Software
-     projects. Using the developers' spare time on support takes time
-     away from development.
+    Munin is a volunteer project, like many other Free Software
+    projects. Using the developers' spare time on support takes time
+    away from development.
 
-**** multiple implementations
+*** Problem: multiple implementations
 
-     Many FastCGI environments handle differently.  Some scrub away
-     environment variables, some do not.
+    Many FastCGI environments handle differently.  Some scrub away
+    environment variables, some do not.
 
-     The RRD cache daemon used for speeding up munin uses environment
-     variables, meaning that graphing simply didn't work well under
-     various hard-to-debug circumstances.
+    The RRD cache daemon used for speeding up munin uses environment
+    variables, meaning that graphing simply didn't work well under
+    various hard-to-debug circumstances.
