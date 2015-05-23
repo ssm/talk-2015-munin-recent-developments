@@ -8,9 +8,11 @@
 
 *** Web interface rewritten
 
-*** A standalone web server replaces the FastCGi scripts
+*** Munin HTTPD added
 
-** Updated: web interface
+*** FastCGI scripts removed
+
+** Web interface rewritten
 
    Munin was a web 1.0 (or web 0.1) holdout for many years.  Now,
    there is a modern web interface.
@@ -27,7 +29,7 @@
      Like a search, but limits the content the browser already has
      received.
 
-** New: munin-httpd
+** Munin HTTPD added
 *** A simple web server
 
     A web server displaying munin master data.  It listens on
@@ -66,8 +68,7 @@
 ***** https
 ***** authentication
 
-** Removed: munin-cgi-*
-
+** FastCGI scripts removed
 *** Problem: Hard to configure
 
     The web server configuration must match configuration in
