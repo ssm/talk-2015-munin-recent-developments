@@ -2,6 +2,13 @@
 
   This is about the development of Munin around versions 2.1.11 and
   2.1.12, in the first half of 2015.
+** Introduction
+
+   A few things have happened in the munin development recently
+
+*** Web interface rewritten
+
+*** A standalone web server replaces the FastCGi scripts
 
 ** Updated: web interface
 
