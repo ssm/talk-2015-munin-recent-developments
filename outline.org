@@ -1,7 +1,10 @@
 * Recent developments in munin
 
-  This is about the development of Munin around versions 2.1.11 and
-  2.1.12, in the first half of 2015.
+  Munin is a networked data gatherer and grapher.
+
+  This is a few highlights from the Munin development branch in the
+  first half of 2015, around version 2.1.12.
+
 ** Introduction
 
    A few things have happened in the munin development recently
