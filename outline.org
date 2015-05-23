@@ -1,0 +1,78 @@
+* Recent developments in munin
+
+  This is about the development of Munin around versions 2.1.11 and
+  2.1.12, in the first half of 2015.
+
+** Updated: web interface
+
+   Munin was a web 1.0 (or web 0.1) holdout for many years.  Now,
+   there is a modern web interface.
+
+*** Responsive design
+**** Fits various screen sizes
+*** Uses javascript responsibly
+
+    Javascript is used to enhance the web interface, but should not be
+    required for it to work.
+
+**** Example: filter
+
+     Like a search, but limits the content the browser already has
+     received.
+
+** New: munin-httpd
+*** What?
+
+    A web server displaying munin master data.  It listens on
+    http://localhost:4948/ by default.
+
+    Much simpler implementation than the FastCGI scripts.
+
+    Much easier to configure
+
+    Much easier to debug
+
+*** How?
+**** start server
+
+     (Needs munin-update to run first.  It will not have anything
+     useful to show until then)
+
+**** connect with browser
+
+     http://your.munin.master.example.com:4948/
+
+*** Simple web server
+
+     A lot of features are already implemented by many web servers.
+     Solution: proxy.
+
+***** https
+***** authentication
+
+** Removed: munin-cgi-*
+
+**** hard to configure
+
+     The web server configuration must match configuration in
+     munin.conf for paths to be aligned.
+
+     Environment variables must be set and passed correctly.
+
+**** Support
+
+     The single most time-consuming issue on the #munin channel on
+     IRC.  "Getting dynamic graphing to work".
+
+     Munin is a volunteer project, like many other Free Software
+     projects. Using the developers' spare time on support takes time
+     away from development.
+
+**** multiple implementations
+
+     Many FastCGI environments handle differently.  Some scrub away
+     environment variables, some do not.
+
+     The RRD cache daemon used for speeding up munin uses environment
+     variables, meaning that graphing simply didn't work well under
+     various hard-to-debug circumstances.
